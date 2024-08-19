@@ -1,0 +1,22 @@
+#spring.application.name=CustomerService
+spring:
+  application:
+    name: CustomerService
+  datasource:
+    url: jdbc:h2:mem:customer
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+server:
+    port: 8100
